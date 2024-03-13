@@ -1,4 +1,4 @@
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: visualpic
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://github.com/AngelFP/VisualPIC/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 5ecbe92fac5ea5148d901438ab5d734ce467653becbf0cf9f64baa8a86577f14
+  sha256: 9b0fc6f47f1321ad0a49bf8c2cd81ee35f0827b3420cc741ce72b43fd3f2b7a4
 
 build:
   number: 0
   noarch: python
   entry_points:
-      - vpic = visualpic.cli.vpic:vpic
-      - vpic3d = visualpic.cli.vpic3d:vpic3d
+    - vpic = visualpic.cli.vpic:vpic
+    - vpic3d = visualpic.cli.vpic3d:vpic3d
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
